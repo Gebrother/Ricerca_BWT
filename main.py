@@ -16,6 +16,17 @@ if __name__ == "__main__":
     arrFinale.sort()
     
     print(arrFinale)
+    lunghezza = len(copiaArr) -1
+
+    print()
+    trasformata = ""
+    for i in range(0, len(arrFinale)):
+        trasformata = trasformata + arrFinale[i][lunghezza]
+
+    print("Trasformata di Burrows-Wheeler Transform: ",  trasformata)
+    print()
+
+
 
 
 
