@@ -1,6 +1,5 @@
-if __name__ == "__main__":
-
-    parola = input("Dimmi la parola di cui vuoi sapere la trasformata  di Burrows-Wheeler: ")
+def BWT(parola):
+    
     arrParola = list(parola)
     arrFinale = []
     arrParola.append( "$")
@@ -22,8 +21,13 @@ if __name__ == "__main__":
     for i in range(0, len(arrFinale)):
         trasformata = trasformata + arrFinale[i][lunghezza]
 
-    print("Trasformata di Burrows-Wheeler Transform: ",  trasformata)
-    print()
+    return trasformata  
+
+
+if __name__ == "__main__":
+
+    parola = input("Dimmi la parola di cui vuoi sapere la trasformata  di Burrows-Wheeler: ")
+    BWT(parola)
 
 
 
