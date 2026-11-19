@@ -11,7 +11,13 @@ def BWT(parola):
         
 
     print(arrFinale)
-    arrFinale.sort()
+    
+    n = len(arrFinale)
+    for i in range(0, n - 1):
+        for j in range(0, n - 1 - i):
+            if arrFinale[j] > arrFinale[j + 1]:
+                arrFinale[j], arrFinale[j + 1] = arrFinale[j + 1], arrFinale[j]
+    
     
     print(arrFinale)
     lunghezza = len(arrParola) -1
